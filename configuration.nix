@@ -52,11 +52,11 @@
   services.printing.enable = true;
 
   # Enable low-latency audio scheduling
-  # security.rtkit.enable = true;
+  security.rtkit.enable = true;
   
   # Pipewire Linux audio stack
-  # services.pipewire = {
-    # enable = true;
+  services.pipewire = {
+    enable = true;
 
     # ALSA Support audio
     # alsa.enable = true;
