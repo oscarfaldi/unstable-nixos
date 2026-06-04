@@ -53,20 +53,20 @@
 
   # Enable low-latency audio scheduling
   security.rtkit.enable = true;
-
-  # Pulse audio stack
-  services.pulseaudio.enable = false;
-
+  
   # Pipewire Linux audio stack
   services.pipewire = {
     enable = true;
 
-    audio.enable = true;
-
-    pulse.enable = true;
-
+    # ALSA Support audio
     alsa.enable = true;
     alsa.support32Bit = true;
+
+    # PulseAudio compatibility layer
+    pulse.enable = true;
+
+    # PipeWire session and device manager
+    wireplumber.enable = true;
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
