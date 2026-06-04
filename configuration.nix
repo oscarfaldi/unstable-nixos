@@ -66,7 +66,7 @@
     pulse.enable = true;
 
     # PipeWire session and device manager
-    wireplumber.enable = true;
+    # wireplumber.enable = true;
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
