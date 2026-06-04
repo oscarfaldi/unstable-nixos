@@ -65,9 +65,8 @@
 
     pulse.enable = true;
 
-    # ALSA Support audio
-    # alsa.enable = true;
-    # alsa.support32Bit = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
