@@ -52,18 +52,18 @@
   services.printing.enable = true;
 
   # Enable low-latency audio scheduling
-  security.rtkit.enable = true;
+  # security.rtkit.enable = true;
   
   # Pipewire Linux audio stack
-  services.pipewire = {
-    enable = true;
+  # services.pipewire = {
+    # enable = true;
 
     # ALSA Support audio
-    alsa.enable = true;
-    alsa.support32Bit = true;
+    # alsa.enable = true;
+    # alsa.support32Bit = true;
 
     # PulseAudio compatibility layer
-    pulse.enable = true;
+    # pulse.enable = true;
 
     # PipeWire session and device manager
     # wireplumber.enable = true;
