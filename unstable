@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+set -e
+
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo " Switching Rainier to unstable..."
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+sudo nix-channel --remove nixos 2>/dev/null || true
+
+sudo nix-channel --add \
+https://channels.nixos.org/nixos-unstable \
+nixos
+
+sudo nix-channel --update
+
+echo
+echo "✓ Unstable channel enabled."
+echo
+echo "Next:"
+echo "sudo nixos-rebuild switch"
+
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo " Rebuilding Rainier system..."
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+sudo nixos-rebuild switch
+
+echo
+echo "✓ System rebuilt."
